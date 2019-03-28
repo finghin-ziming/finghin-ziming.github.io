@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）">
+<meta name="description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）若是centos，需要安装wgetyum install -y wget 1wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;amp;&amp;amp; bash install.s">
 <meta name="keywords" content="数据挖掘，爬虫，深度学习，数据造物">
 <meta property="og:type" content="article">
 <meta property="og:title" content="v2ray一键安装脚本带图形面板">
 <meta property="og:url" content="http://yoursite.com/2019/03/27/v2ray一键安装脚本带图形面板/index.html">
 <meta property="og:site_name" content="Finghin的希尔伯特空间">
-<meta property="og:description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）">
+<meta property="og:description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）若是centos，需要安装wgetyum install -y wget 1wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;amp;&amp;amp; bash install.s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-27T13:30:46.630Z">
+<meta property="og:updated_time" content="2019-03-28T03:31:32.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray一键安装脚本带图形面板">
-<meta name="twitter:description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）">
+<meta name="twitter:description" content="v2ray一键安装脚本带图形面板v2ray一键安装脚本（面板）若是centos，需要安装wgetyum install -y wget 1wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;amp;&amp;amp; bash install.s">
 
 
 
@@ -343,7 +343,24 @@
       
 
       
-        <h3 id="v2ray一键安装脚本带图形面板"><a href="#v2ray一键安装脚本带图形面板" class="headerlink" title="v2ray一键安装脚本带图形面板"></a>v2ray一键安装脚本带图形面板</h3><h4 id="v2ray一键安装脚本（面板）"><a href="#v2ray一键安装脚本（面板）" class="headerlink" title="v2ray一键安装脚本（面板）"></a>v2ray一键安装脚本（面板）</h4>
+        <h3 id="v2ray一键安装脚本带图形面板"><a href="#v2ray一键安装脚本带图形面板" class="headerlink" title="v2ray一键安装脚本带图形面板"></a>v2ray一键安装脚本带图形面板</h3><h4 id="v2ray一键安装脚本（面板）"><a href="#v2ray一键安装脚本（面板）" class="headerlink" title="v2ray一键安装脚本（面板）"></a>v2ray一键安装脚本（面板）</h4><p>若是centos，需要安装wget<br><code>yum install -y wget</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+<p>脚本快要结束时，会提示输入面板的用户名、密码、控制面板的端口（centos系统有时需要防火墙打开对应端口），如下图所示：</p>
+<p><strong>centos7系统需要手动开启对应端口，命令如下：</strong><br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code>  (永久开启80端口)</p>
+<p><strong>输入</strong> <code>v2ray</code> <strong>出现管理选项，选择1 回车，启动面板。</strong></p>
+<p>输入服务器IP及面板端口，访问v2ray面板，输入面板的用户密码登录面板。登陆后面板如下图：</p>
+<p><strong>v2ray控制面板设置</strong><br><em>修改连接设置</em></p>
+<ul>
+<li>运行控制：用于控制v2ray的状态。</li>
+<li>UUID：用于客户端连接使用，默认自动生成，点击右侧按钮可重新生成。</li>
+<li>主端口：用于客户端连接的端口，可以设置一个新的端口，然后点击右侧按钮修改。</li>
+<li>加密方式：用于客户端连接的加密参数，一般默认即可。</li>
+<li>传输方式：也是客户端连接参数之一，默认TCP即可。</li>
+<li>TLS：不建议开启，默认是关闭的。</li>
+<li>Mux cool：多路复用功能，可提供并发连接性能，默认开启。</li>
+</ul>
+<h4 id="备用的另外一套v2ray一键脚本"><a href="#备用的另外一套v2ray一键脚本" class="headerlink" title="备用的另外一套v2ray一键脚本"></a>备用的另外一套v2ray一键脚本</h4><p><a href="https://ssr.tools/1026" target="_blank" rel="noopener">233版v2ray一键安装脚本 集成BBR/锐速/shadowsocks</a></p>
+
       
     </div>
     
@@ -498,7 +515,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#v2ray一键安装脚本带图形面板"><span class="nav-number">1.</span> <span class="nav-text">v2ray一键安装脚本带图形面板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v2ray一键安装脚本（面板）"><span class="nav-number">1.1.</span> <span class="nav-text">v2ray一键安装脚本（面板）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#v2ray一键安装脚本带图形面板"><span class="nav-number">1.</span> <span class="nav-text">v2ray一键安装脚本带图形面板</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v2ray一键安装脚本（面板）"><span class="nav-number">1.1.</span> <span class="nav-text">v2ray一键安装脚本（面板）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#备用的另外一套v2ray一键脚本"><span class="nav-number">1.2.</span> <span class="nav-text">备用的另外一套v2ray一键脚本</span></a></li></ol></li></ol></div>
             
 
           </div>
