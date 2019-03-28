@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="233版v2ray一键安装脚本-集成BBR锐速ss安装 V2Ray 一键脚本命令如下： bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)  如果提示 curl: command not found ，那是因为你的 VPS 没装 Curlubuntu/debian 系统安装 Curl 方法: apt-get update -y &amp;amp;&amp;amp; apt-">
+<meta name="keywords" content="数据挖掘，爬虫，深度学习，数据造物">
+<meta property="og:type" content="article">
+<meta property="og:title" content="233版v2ray一键安装脚本-集成BBR锐速ss">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/233版v2ray一键安装脚本-集成BBR锐速ss/index.html">
+<meta property="og:site_name" content="Finghin的希尔伯特空间">
+<meta property="og:description" content="233版v2ray一键安装脚本-集成BBR锐速ss安装 V2Ray 一键脚本命令如下： bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)  如果提示 curl: command not found ，那是因为你的 VPS 没装 Curlubuntu/debian 系统安装 Curl 方法: apt-get update -y &amp;amp;&amp;amp; apt-">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC1.jpeg">
+<meta property="og:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC2.jpeg">
+<meta property="og:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC3.jpeg">
+<meta property="og:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC4.jpeg">
+<meta property="og:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC5.jpeg">
+<meta property="og:updated_time" content="2019-03-28T09:59:34.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="233版v2ray一键安装脚本-集成BBR锐速ss">
+<meta name="twitter:description" content="233版v2ray一键安装脚本-集成BBR锐速ss安装 V2Ray 一键脚本命令如下： bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)  如果提示 curl: command not found ，那是因为你的 VPS 没装 Curlubuntu/debian 系统安装 Curl 方法: apt-get update -y &amp;amp;&amp;amp; apt-">
+<meta name="twitter:image" content="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC1.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/28/233版v2ray一键安装脚本-集成BBR锐速ss/">
+
+
+
+
+
+  <title>233版v2ray一键安装脚本-集成BBR锐速ss | Finghin的希尔伯特空间</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Finghin的希尔伯特空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">完备的，可记录的，可虚拟的</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/233版v2ray一键安装脚本-集成BBR锐速ss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finghin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finghin的希尔伯特空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">233版v2ray一键安装脚本-集成BBR锐速ss</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T17:28:18+08:00">
+                2019-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/v2ray/" itemprop="url" rel="index">
+                    <span itemprop="name">v2ray</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="233版v2ray一键安装脚本-集成BBR锐速ss"><a href="#233版v2ray一键安装脚本-集成BBR锐速ss" class="headerlink" title="233版v2ray一键安装脚本-集成BBR锐速ss"></a>233版v2ray一键安装脚本-集成BBR锐速ss</h3><h4 id="安装-V2Ray"><a href="#安装-V2Ray" class="headerlink" title="安装 V2Ray"></a>安装 V2Ray</h4><hr>
+<p><strong>一键脚本命令如下：</strong></p>
+<p><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></p>
+<blockquote>
+<p>如果提示 curl: command not found ，那是因为你的 VPS 没装 Curl<br>ubuntu/debian 系统安装 Curl 方法: apt-get update -y &amp;&amp; apt-get install curl -y<br>centos 系统安装 Curl 方法: yum update -y &amp;&amp; yum install curl -y<br>安装好 curl 之后就能安装脚本了</p>
+</blockquote>
+<p>然后选择安装，即是输入 1 回车<br>选择传输协议，如果没有特别的需求，使用默认的 TCP 传输协议即可，直接回车<br>选择端口，如果没有特别的需求，使用默认的端口即可，直接回车<br>是否屏蔽广告，除非你真的需要，一般来说，直接回车即可</p>
+<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC1.jpeg" alt="安装v2ray配置"></p>
+<p>是否配置 Shadowsocks ，如果不需要就直接回车，否则就输入 Y 回车<br>Shadowsocks 端口，密码，加密方式这些东西自己看情况配置即可，我个人当然是全部直接回车。。<br>OK，按回车继续</p>
+<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC2.jpeg" alt="安装ss配置"></p>
+<p>安装信息，如果确保没有什么问题了，按回车继续</p>
+<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC3.jpeg" alt="确保v2ray与ss安装配置"></p>
+<h4 id="V2Ray-安装完成"><a href="#V2Ray-安装完成" class="headerlink" title="V2Ray 安装完成"></a>V2Ray 安装完成</h4><hr>
+<p>OK，此时 V2Ray 已经安装完成了。</p>
+<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC4.jpeg" alt="安装完成显示配置信息"></p>
+<p>如上图所示，V2Ray 配置信息，Shadowsocks 配置信息都有了<br>如果你使用过 Shadowsocks ，那么现在你可以测试一下 Shadowsocks 配置了，看看是否能正常使用。<br>如果你使用过 V2Ray 某些客户端，那么现在也可以测试一下配置了。<br>(备注，可能某些 V2Ray 客户端的选项或描述略有不同，但事实上，上面的 V2Ray 配置信息已经足够详细，由于客户端的不同，请对号入座。)</p>
+<h4 id="V2Ray-管理面板"><a href="#V2Ray-管理面板" class="headerlink" title="V2Ray 管理面板"></a>V2Ray 管理面板</h4><hr>
+<p>现在可以尝试一下输入 <code>v2ray</code> 回车，即可管理 V2Ray。</p>
+<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC5.jpeg" alt="v2ray管理面板"></p>
+<h4 id="快速管理-V2Ray"><a href="#快速管理-V2Ray" class="headerlink" title="快速管理 V2Ray"></a>快速管理 V2Ray</h4><hr>
+<p><code>v2ray info</code> 查看 V2Ray 配置信息<br><code>v2ray config</code> 修改 V2Ray 配置<br><code>v2ray link</code> 生成 V2Ray 配置文件链接<br><code>v2ray infolink</code> 生成 V2Ray 配置信息链接<br><code>v2ray qr</code> 生成 V2Ray 配置二维码链接<br><code>v2ray ss</code> 修改 Shadowsocks 配置<br><code>v2ray ssinfo</code> 查看 Shadowsocks 配置信息<br><code>v2ray ssqr</code> 生成 Shadowsocks 配置二维码链接<br><code>v2ray status</code> 查看 V2Ray 运行状态<br><code>v2ray start</code> 启动 V2Ray<br><code>v2ray stop</code> 停止 V2Ray<br><code>v2ray restart</code> 重启 V2Ray<br><code>v2ray log</code> 查看 V2Ray 运行日志<br><code>v2ray update</code> 更新 V2Ray<br><code>v2ray update.sh</code> 更新 V2Ray 管理脚本<br><code>v2ray uninstall</code> 卸载 V2Ray</p>
+<h4 id="优化-V2Ray"><a href="#优化-V2Ray" class="headerlink" title="优化 V2Ray"></a>优化 V2Ray</h4><hr>
+<p>在 Debian9 系统会自动开启 BBR 优化加速了，所以不需要再安装 BBR 优化了，<br>如果你还是觉得网络比较慢的话，你可以尝试使用含有 mKCP 的传输协议，这个 mKCP 的东东，简单一点说就像 Kcptun 一样加速，并且还能进行伪装 (可选)，但是由于 mKCP 是使用 UDP 协议的，也许运营商会限速得更加厉害，网络变得更加慢。但不管怎么样，你都可以随时尝试一下。<br>服务器输入 <code>v2ray config</code> 回车，然后选择 修改 V2Ray 传输协议，再接着选择 mKCP 相关的传输协议即可<br>如果你是使用其他商家的 VPS 并且是按照此教程流程来安装 V2Ray 的话，那么你可以输入 <code>v2ray bbr</code> 回车，然后选择安装 BBR 或者 锐速 来优化 V2Ray<br>只是还想再啰嗦一下，如果你是使用国际大厂的 VPS，并且是按照此教程流程来安装 V2Ray 的话，请自行在安全组 (防火墙) 开放端口和 UDP 协议 (如果你要使用含有 mKCP 的传输协议)</p>
+<h4 id="centos7（防火墙）放行端口"><a href="#centos7（防火墙）放行端口" class="headerlink" title="centos7（防火墙）放行端口"></a>centos7（防火墙）放行端口</h4><hr>
+<p><code>firewall-cmd --add-port=28888/tcp --permanent</code> (永久开启28888端口)</p>
+<h4 id="搬瓦工-VPS-速度慢"><a href="#搬瓦工-VPS-速度慢" class="headerlink" title="搬瓦工 VPS 速度慢"></a>搬瓦工 VPS 速度慢</h4><hr>
+<p>如果你觉得搬瓦工 VPS 速度慢，你可以尝试修改一下端口，服务器输入 <code>v2ray config</code> ，然后选择 修改 V2Ray 端口 即可，建议使用常见的端口，比如说 443，当然，为了更加安全隐蔽，你可以直接尝试使用 WebSocket + TLS 或者 HTTP/2 协议，但是使用这两个协议对于没有接触过 域名 的同学相对来说会是比较困难的。<br>搬瓦工 VPS 速度慢的一个主要原因可能会是因为端口限速，如果你已经修改端口为 443，速度还是慢的话，我建议你尝试使用 mKCP 协议。</p>
+<h4 id="哪个传输协议好？"><a href="#哪个传输协议好？" class="headerlink" title="哪个传输协议好？"></a>哪个传输协议好？</h4><hr>
+<p>心中无杂念，用 TCP<br>ISP 常作怪，用 动态端口<br>小鸡速度不好，用 mKCP<br>处子之身，用 WS + TLS</p>
+<h4 id="最后感谢233boy"><a href="#最后感谢233boy" class="headerlink" title="最后感谢233boy"></a>最后感谢233boy</h4><hr>
+<p>本文大量参考 <a href="https://github.com/233boy/v2ray/wiki/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B" target="_blank" rel="noopener">233boy的v2ray脚本说明</a><br>感谢 <strong>233boy</strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/27/v2ray一键安装脚本带图形面板/" rel="next" title="v2ray一键安装脚本带图形面板">
+                <i class="fa fa-chevron-left"></i> v2ray一键安装脚本带图形面板
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Finghin</p>
+              <p class="site-description motion-element" itemprop="description">记录生活，可回溯的时间技术。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#233版v2ray一键安装脚本-集成BBR锐速ss"><span class="nav-number">1.</span> <span class="nav-text">233版v2ray一键安装脚本-集成BBR锐速ss</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-V2Ray"><span class="nav-number">1.1.</span> <span class="nav-text">安装 V2Ray</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#V2Ray-安装完成"><span class="nav-number">1.2.</span> <span class="nav-text">V2Ray 安装完成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#V2Ray-管理面板"><span class="nav-number">1.3.</span> <span class="nav-text">V2Ray 管理面板</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速管理-V2Ray"><span class="nav-number">1.4.</span> <span class="nav-text">快速管理 V2Ray</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化-V2Ray"><span class="nav-number">1.5.</span> <span class="nav-text">优化 V2Ray</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#centos7（防火墙）放行端口"><span class="nav-number">1.6.</span> <span class="nav-text">centos7（防火墙）放行端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搬瓦工-VPS-速度慢"><span class="nav-number">1.7.</span> <span class="nav-text">搬瓦工 VPS 速度慢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哪个传输协议好？"><span class="nav-number">1.8.</span> <span class="nav-text">哪个传输协议好？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后感谢233boy"><span class="nav-number">1.9.</span> <span class="nav-text">最后感谢233boy</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Finghin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
