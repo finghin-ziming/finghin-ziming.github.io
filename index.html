@@ -717,18 +717,18 @@
 <p>如果提示 curl: command not found ，那是因为你的 VPS 没装 Curl<br>ubuntu/debian 系统安装 Curl 方法: apt-get update -y &amp;&amp; apt-get install curl -y<br>centos 系统安装 Curl 方法: yum update -y &amp;&amp; yum install curl -y<br>安装好 curl 之后就能安装脚本了</p>
 </blockquote>
 <p>然后选择安装，即是输入 1 回车<br>选择传输协议，如果没有特别的需求，使用默认的 TCP 传输协议即可，直接回车<br>选择端口，如果没有特别的需求，使用默认的端口即可，直接回车<br>是否屏蔽广告，除非你真的需要，一般来说，直接回车即可</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC1.jpeg" alt="安装v2ray配置"></p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3yfqb74m8j20tn0txq65.jpg" alt="安装v2ray配置"></p>
 <p>是否配置 Shadowsocks ，如果不需要就直接回车，否则就输入 Y 回车<br>Shadowsocks 端口，密码，加密方式这些东西自己看情况配置即可，我个人当然是全部直接回车。。<br>OK，按回车继续</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC2.jpeg" alt="安装ss配置"></p>
+<p><img src="http://wx2.sinaimg.cn/large/e2654362gy1g3yfqfawqkj20ih0h83zv.jpg" alt="安装ss配置"></p>
 <p>安装信息，如果确保没有什么问题了，按回车继续</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC3.jpeg" alt="确保v2ray与ss安装配置"></p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362gy1g3yfqno6cbj20ci09pt97.jpg" alt="确保v2ray与ss安装配置"></p>
 <h4 id="V2Ray-安装完成"><a href="#V2Ray-安装完成" class="headerlink" title="V2Ray 安装完成"></a>V2Ray 安装完成</h4><hr>
 <p>OK，此时 V2Ray 已经安装完成了。</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC4.jpeg" alt="安装完成显示配置信息"></p>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362gy1g3yfqqm3gij20q00g5myv.jpg" alt="安装完成显示配置信息"></p>
 <p>如上图所示，V2Ray 配置信息，Shadowsocks 配置信息都有了<br>如果你使用过 Shadowsocks ，那么现在你可以测试一下 Shadowsocks 配置了，看看是否能正常使用。<br>如果你使用过 V2Ray 某些客户端，那么现在也可以测试一下配置了。<br>(备注，可能某些 V2Ray 客户端的选项或描述略有不同，但事实上，上面的 V2Ray 配置信息已经足够详细，由于客户端的不同，请对号入座。)</p>
 <h4 id="V2Ray-管理面板"><a href="#V2Ray-管理面板" class="headerlink" title="V2Ray 管理面板"></a>V2Ray 管理面板</h4><hr>
 <p>现在可以尝试一下输入 <code>v2ray</code> 回车，即可管理 V2Ray。</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC5.jpeg" alt="v2ray管理面板"></p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3yfqtl8shj20gm0h40u9.jpg" alt="v2ray管理面板"></p>
 <h4 id="快速管理-V2Ray"><a href="#快速管理-V2Ray" class="headerlink" title="快速管理 V2Ray"></a>快速管理 V2Ray</h4><hr>
 <p><code>v2ray info</code> 查看 V2Ray 配置信息<br><code>v2ray config</code> 修改 V2Ray 配置<br><code>v2ray link</code> 生成 V2Ray 配置文件链接<br><code>v2ray infolink</code> 生成 V2Ray 配置信息链接<br><code>v2ray qr</code> 生成 V2Ray 配置二维码链接<br><code>v2ray ss</code> 修改 Shadowsocks 配置<br><code>v2ray ssinfo</code> 查看 Shadowsocks 配置信息<br><code>v2ray ssqr</code> 生成 Shadowsocks 配置二维码链接<br><code>v2ray status</code> 查看 V2Ray 运行状态<br><code>v2ray start</code> 启动 V2Ray<br><code>v2ray stop</code> 停止 V2Ray<br><code>v2ray restart</code> 重启 V2Ray<br><code>v2ray log</code> 查看 V2Ray 运行日志<br><code>v2ray update</code> 更新 V2Ray<br><code>v2ray update.sh</code> 更新 V2Ray 管理脚本<br><code>v2ray uninstall</code> 卸载 V2Ray</p>
 <h4 id="优化-V2Ray"><a href="#优化-V2Ray" class="headerlink" title="优化 V2Ray"></a>优化 V2Ray</h4><hr>
@@ -896,12 +896,12 @@
             <h3 id="v2ray一键安装脚本带图形面板"><a href="#v2ray一键安装脚本带图形面板" class="headerlink" title="v2ray一键安装脚本带图形面板"></a>v2ray一键安装脚本带图形面板</h3><h4 id="v2ray一键安装脚本（面板）"><a href="#v2ray一键安装脚本（面板）" class="headerlink" title="v2ray一键安装脚本（面板）"></a>v2ray一键安装脚本（面板）</h4><p>若是centos，需要安装wget<br><code>yum install -y wget</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/V2ray.Fun/master/install.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
 <p>脚本快要结束时，会提示输入面板的用户名、密码、控制面板的端口（centos系统有时需要防火墙打开对应端口），如下图所示：</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E5%B8%A6%E5%9B%BE%E5%BD%A2%E9%9D%A2%E6%9D%BF1.jpg" alt="设置面板信息"></p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3yfw5k3o7j20cq04vaac.jpg" alt="设置面板信息"></p>
 <p><strong>centos7系统需要手动开启对应端口，命令如下：</strong><br><code>firewall-cmd --add-port=28888/tcp --permanent</code>  (永久开启28888端口)</p>
 <p><strong>输入</strong> <code>v2ray</code> <strong>出现管理选项，如下图显示，选择1 回车，启动面板。</strong></p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E5%B8%A6%E5%9B%BE%E5%BD%A2%E9%9D%A2%E6%9D%BF2.jpg" alt="v2ray管理选项"></p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362gy1g3yfw91ccdj20av08rgly.jpg" alt="v2ray管理选项"></p>
 <p>输入服务器IP及面板端口，访问v2ray面板，输入面板的用户密码登录面板。登陆后面板如下图：</p>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E5%B8%A6%E5%9B%BE%E5%BD%A2%E9%9D%A2%E6%9D%BF3.jpg" alt="v2ray面板登录页面"></p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3yfwei4qij20p00gowf4.jpg" alt="v2ray面板登录页面"></p>
 <p><strong>v2ray控制面板设置</strong><br><em>修改连接设置</em></p>
 <ul>
 <li>运行控制：用于控制v2ray的状态。</li>
@@ -912,7 +912,7 @@
 <li>TLS：不建议开启，默认是关闭的。</li>
 <li>Mux cool：多路复用功能，可提供并发连接性能，默认开启。</li>
 </ul>
-<p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E5%B8%A6%E5%9B%BE%E5%BD%A2%E9%9D%A2%E6%9D%BF4.jpg" alt="控制面板修改连接设置"></p>
+<p><img src="http://wx3.sinaimg.cn/mw690/e2654362gy1g3yfwlzdkzj20m80c6wez.jpg" alt="控制面板修改连接设置"></p>
 <h4 id="备用的另外一套v2ray一键脚本"><a href="#备用的另外一套v2ray一键脚本" class="headerlink" title="备用的另外一套v2ray一键脚本"></a>备用的另外一套v2ray一键脚本</h4><p><a href="https://finghin-ziming.github.io/2019/03/28/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC-%E9%9B%86%E6%88%90BBR%E9%94%90%E9%80%9Fss/" target="_blank" rel="noopener">233版v2ray一键安装脚本 集成BBR/锐速/shadowsocks</a></p>
 
           
