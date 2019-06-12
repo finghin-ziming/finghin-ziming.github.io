@@ -243,6 +243,369 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/11/亚马逊AWS的VPS一年免费套餐的保姆级教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finghin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finghin的希尔伯特空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/11/亚马逊AWS的VPS一年免费套餐的保姆级教程/" itemprop="url">亚马逊AWS的VPS一年免费套餐的保姆级教程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T20:29:57+08:00">
+                2019-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IDC/" itemprop="url" rel="index">
+                    <span itemprop="name">IDC</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IDC/AWS/" itemprop="url" rel="index">
+                    <span itemprop="name">AWS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="亚马逊AWS的VPS一年免费套餐的保姆级教程"><a href="#亚马逊AWS的VPS一年免费套餐的保姆级教程" class="headerlink" title="亚马逊AWS的VPS一年免费套餐的保姆级教程"></a>亚马逊AWS的VPS一年免费套餐的保姆级教程</h3><h4 id="亚马逊AWS的免费套餐说明"><a href="#亚马逊AWS的免费套餐说明" class="headerlink" title="亚马逊AWS的免费套餐说明"></a>亚马逊AWS的免费套餐说明</h4><hr>
+<p>亚马逊AWS的免费套餐分为三类：永久免费、12个月免费和试用。详细的套餐情况看官网<a href="https://amazonaws-china.com/cn/free/?sc_channel=PS&amp;sc_campaign=acquisition_CN&amp;sc_publisher=baidu&amp;sc_medium=bz&amp;sc_content=pc&amp;sc_detail=HL&amp;sc_category=pc&amp;sc_segment=test&amp;sc_country=CN&amp;trkCampaign=request_for_pilot_account&amp;trk=baidu-ppc-test&amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc&amp;awsf.Free%20Tier%20Types=categories%23featured" target="_blank" rel="noopener">AWS免费套餐详细信息</a>。这里说的是12个月的免费云服务器服务套餐。</p>
+<p><strong>免费云服务器套餐</strong></p>
+<ul>
+<li>Amazon EC2：750个小时的Linux、RHEL、SLES、window t2.micro型云服务器实例（虚拟机）</li>
+<li>Amazon S3： 5GB的标准存储容量（存储空间）</li>
+<li>Amazon RDS：750个小时的db.t2.micro型关系型数据库（数据库）</li>
+<li>…</li>
+<li>30G流量：上下行分别15G<br><em>注意：上述套餐用超了都要另外扣钱，按套餐原价扣除</em></li>
+</ul>
+<h4 id="注册AWS新用户"><a href="#注册AWS新用户" class="headerlink" title="注册AWS新用户"></a>注册AWS新用户</h4><hr>
+<p><a href="https://portal.aws.amazon.com/billing/signup" target="_blank" rel="noopener">注册链接</a></p>
+<p>进入下一步，选择个人；再下一步绑定储蓄卡或者信用卡。绑定卡后会扣1美元的预付款，往后会返还的。</p>
+<h4 id="登录AWS的EC2控制面板，创建实例"><a href="#登录AWS的EC2控制面板，创建实例" class="headerlink" title="登录AWS的EC2控制面板，创建实例"></a>登录AWS的EC2控制面板，创建实例</h4><hr>
+<p>如下图，先在右上角选择 <strong>亚太地区：东京</strong> （东京对国内来说是较快的节点），然后选择 <strong>启动实例</strong> 。</p>
+<p><img src="http://wx2.sinaimg.cn/large/e2654362gy1g3y9di0flvj21xn0u0dqh.jpg" alt="ec2控制面板"></p>
+<h5 id="1、选择服务器系统"><a href="#1、选择服务器系统" class="headerlink" title="1、选择服务器系统"></a>1、选择服务器系统</h5><p>如下图，勾选左侧栏的 <strong>仅免费套餐</strong> ，筛选出免费套餐可用的服务器系统，我们这里选择 <code>Ubuntu Server 16.04 LTS (HVM), SSD Volume Type</code>，16.04版本的Ubuntu系统。</p>
+<p><img src="http://wx2.sinaimg.cn/large/e2654362gy1g3y9eyzp4vj224g0u0qdd.jpg" alt="选择服务器系统"></p>
+<h5 id="2、选择实例的虚拟硬件"><a href="#2、选择实例的虚拟硬件" class="headerlink" title="2、选择实例的虚拟硬件"></a>2、选择实例的虚拟硬件</h5><p>如下图，选中第二项 t2.micro类型。<strong>默认是选中的，不用更改</strong> ，选<code>下一步：配置实例详细信息</code>。</p>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362gy1g3y9f2qmnmj21zj0u047z.jpg" alt="选择实例虚拟硬件配置"></p>
+<h5 id="3、配置实例详细信息"><a href="#3、配置实例详细信息" class="headerlink" title="3、配置实例详细信息"></a>3、配置实例详细信息</h5><p>如下图，在自动分配公有IP项里选择 <code>启用</code> ，独立公有IP必须得有啊。选<code>下一步：添加存储</code>。</p>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362gy1g3y9f64m3cj223y0u00zx.jpg" alt="配置实例详细信息"></p>
+<h5 id="4、添加存储"><a href="#4、添加存储" class="headerlink" title="4、添加存储"></a>4、添加存储</h5><p>如下图，在大小里填 <code>30</code>。 30G的存储卷是AWS永久免费使用的。选<code>下一步：添加标签</code>。</p>
+<p><img src="http://wx2.sinaimg.cn/large/e2654362gy1g3y9fkglfhj21yf0u0qaa.jpg" alt="添加存储"></p>
+<h5 id="5、添加主机标签"><a href="#5、添加主机标签" class="headerlink" title="5、添加主机标签"></a>5、添加主机标签</h5><p>如下图，添加标签是用于标记主机名的，这一步，我这里跳过了，不加标签。选<code>下一步：配置安全组</code>。</p>
+<p><img src="http://wx2.sinaimg.cn/large/e2654362gy1g3y9fntmahj223g0u0q8t.jpg" alt="添加主机标签"></p>
+<h5 id="6、添加安全组"><a href="#6、添加安全组" class="headerlink" title="6、添加安全组"></a>6、添加安全组</h5><p>如下图，默认选择创建一个新的安全组，并默认已经添加了ssh的规则。（ssh是电脑远程登录服务器用的），这一步不用设置，保持默认。选<code>审核和启动</code>。</p>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362gy1g3y9g0hmp4j22410u0n4e.jpg" alt="添加安全组"></p>
+<h5 id="7、核查实例配置并启动"><a href="#7、核查实例配置并启动" class="headerlink" title="7、核查实例配置并启动"></a>7、核查实例配置并启动</h5><p>如下图，核查一下之前的实例配置是否合适，右下角点击<code>启动</code>，在弹出框里，选择<code>创建新 密钥对</code>，输入密钥对名称（要用英文命名），点击<code>下载密钥对</code>，下载密钥到本地电脑保存好，这里假设密钥名为 <strong>example.pem</strong> 保存在本地目录 <strong>/home/users</strong> 下，下面教程会用到。</p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3y9g41sz3j21y60u0n97.jpg" alt="核查实例配置并启动"></p>
+<h4 id="ssh远程登录云服务器，重新设置服务器上的ssh配置，方便以后登录"><a href="#ssh远程登录云服务器，重新设置服务器上的ssh配置，方便以后登录" class="headerlink" title="ssh远程登录云服务器，重新设置服务器上的ssh配置，方便以后登录"></a>ssh远程登录云服务器，重新设置服务器上的ssh配置，方便以后登录</h4><hr>
+<p>实例启动后，在实例面板如下图所示。记下该实例的独立公有IP，ssh登录需要用到。</p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362gy1g3y9g9xebkj21yy0u07d7.jpg" alt="实例启动后的面板"></p>
+<h5 id="mac系统ssh登录"><a href="#mac系统ssh登录" class="headerlink" title="mac系统ssh登录"></a>mac系统ssh登录</h5><p>mac系统自带了ssh工具，打开终端，输入下面的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i /home/users/example.pem ubuntu@独立公有IP</span><br></pre></td></tr></table></figure></p>
+<p>接着终端会提示是否创建ssh连接，输入<code>yes</code>，回车。<br>如下图，已经ssh登录到服务器上。</p>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362gy1g3y9gdjjccj20vo0katg3.jpg" alt="mac系统ssh登录"></p>
+<h5 id="win系统ssh登录"><a href="#win系统ssh登录" class="headerlink" title="win系统ssh登录"></a>win系统ssh登录</h5><p>window系统，需要用ssh软件进行远程登录，推荐使用xshell或putty。这里用 <strong>xshell</strong> 说明。</p>
+<p>如下图，打开xshell，新建会话，名称随便写，主机填写 <strong>实例的公有IP</strong> ，端口填写 <strong>22</strong> 。</p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362gy1g3y9ghoc0yj20vb0u0dwk.jpg" alt="新建会话"></p>
+<p>如下图，点击用户身份验证，方法选择 <strong>Public key</strong> ，用户名填写 <strong>ubuntu</strong> ，用户密钥浏览选择刚才保存在本地的密钥对导入，点确定。</p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362gy1g3y9gp452zj20vd0u04h6.jpg" alt="用户身份验证"></p>
+<h5 id="登录到服务器后，修改ssh配置并设置用户密码"><a href="#登录到服务器后，修改ssh配置并设置用户密码" class="headerlink" title="登录到服务器后，修改ssh配置并设置用户密码"></a>登录到服务器后，修改ssh配置并设置用户密码</h5><ol>
+<li>设置root管理员用户密码： <code>sudo passwd root</code> 提示输入两次密码，每次输入用回车确认。</li>
+<li>切换到root账号： <code>su root</code> 输入刚才设置的密码，回车确认。</li>
+<li>设置ubuntu用户密码： <code>passwd ubuntu</code> 提示输入两次密码，每次输入用回车确认。</li>
+<li>编辑服务器的ssh配置： <code>vi /etc/ssh/sshd_config</code> 回车进入vi编辑界面。在输入法英文状态下，按 <strong>i</strong> 键进入编辑模式。查找到 <strong>PasswordAuthentication no</strong> 将 <strong>no</strong> 改成 <strong>yes</strong> ，按 <strong>esc</strong> 键，退出编辑模式。然后输入 <strong>:wq</strong> 回车，退出vi编辑界面。</li>
+<li>重启实例系统： <code>reboot</code> 回车，立即重启服务器系统。</li>
+</ol>
+<h5 id="重启后，可以使用用户密码来ssh登录服务器了"><a href="#重启后，可以使用用户密码来ssh登录服务器了" class="headerlink" title="重启后，可以使用用户密码来ssh登录服务器了"></a>重启后，可以使用用户密码来ssh登录服务器了</h5><h6 id="mac系统登录"><a href="#mac系统登录" class="headerlink" title="mac系统登录"></a>mac系统登录</h6><p>使用 <code>ssh ubuntu@独立公有IP</code> 回车，输入上一步设置的ubuntu用户密码，回车，即可登录服务器实例。</p>
+<h6 id="win系统登录"><a href="#win系统登录" class="headerlink" title="win系统登录"></a>win系统登录</h6><p>使用xshell，在用户身份验证里，方法选择 <strong>Password</strong> ，用户名填写 <strong>ubuntu</strong> ，密码填写上一步设置的ubuntu用户密码，点击确定，即可登录服务器实例。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/macOS_v2rayX安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finghin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finghin的希尔伯特空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/28/macOS_v2rayX安装/" itemprop="url">macOS_v2rayX安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T18:20:54+08:00">
+                2019-03-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/" itemprop="url" rel="index">
+                    <span itemprop="name">科学上网</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/科学上网/v2ray/" itemprop="url" rel="index">
+                    <span itemprop="name">v2ray</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="安装v2rayX"><a href="#安装v2rayX" class="headerlink" title="安装v2rayX"></a>安装v2rayX</h3><hr>
+<p><code>brew cask install v2rayx</code></p>
+<h3 id="卸载v2rayX"><a href="#卸载v2rayX" class="headerlink" title="卸载v2rayX"></a>卸载v2rayX</h3><p>V2RayX will create the following files and folders:</p>
+<ul>
+<li><code>/Library/Application Support/V2RayX</code></li>
+<li><code>~/Library/Application Support/V2RayX</code></li>
+<li><code>~/Library/Preferences/cenmrev.V2RayX.plist</code></li>
+</ul>
+<p>So, to totally uninstall V2RayX, just delete V2RayX.app and the files above. :)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/233版v2ray一键安装脚本-集成BBR锐速ss/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -550,7 +913,7 @@
 <li>Mux cool：多路复用功能，可提供并发连接性能，默认开启。</li>
 </ul>
 <p><img src="http://pp2bgmgj5.bkt.clouddn.com/blog/v2ray/v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E5%B8%A6%E5%9B%BE%E5%BD%A2%E9%9D%A2%E6%9D%BF4.jpg" alt="控制面板修改连接设置"></p>
-<h4 id="备用的另外一套v2ray一键脚本"><a href="#备用的另外一套v2ray一键脚本" class="headerlink" title="备用的另外一套v2ray一键脚本"></a>备用的另外一套v2ray一键脚本</h4><p><a href="https://ssr.tools/1026" target="_blank" rel="noopener">233版v2ray一键安装脚本 集成BBR/锐速/shadowsocks</a></p>
+<h4 id="备用的另外一套v2ray一键脚本"><a href="#备用的另外一套v2ray一键脚本" class="headerlink" title="备用的另外一套v2ray一键脚本"></a>备用的另外一套v2ray一键脚本</h4><p><a href="https://finghin-ziming.github.io/2019/03/28/233%E7%89%88v2ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC-%E9%9B%86%E6%88%90BBR%E9%94%90%E9%80%9Fss/" target="_blank" rel="noopener">233版v2ray一键安装脚本 集成BBR/锐速/shadowsocks</a></p>
 
           
         
@@ -887,7 +1250,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -898,7 +1261,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
