@@ -392,11 +392,13 @@
 <li>设置root管理员用户密码： <code>sudo passwd root</code> 提示输入两次密码，每次输入用回车确认。</li>
 <li>切换到root账号： <code>su root</code> 输入刚才设置的密码，回车确认。</li>
 <li>设置ubuntu用户密码： <code>passwd ubuntu</code> 提示输入两次密码，每次输入用回车确认。</li>
-<li>编辑服务器的ssh配置： <code>vi /etc/ssh/sshd_config</code> 回车进入vi编辑界面。在输入法英文状态下，按 <strong>i</strong> 键进入编辑模式。查找到 <strong>PasswordAuthentication no</strong> 将 <strong>no</strong> 改成 <strong>yes</strong> ，按 <strong>esc</strong> 键，退出编辑模式。然后输入 <strong>:wq</strong> 回车，退出vi编辑界面。</li>
+<li>编辑服务器的ssh配置文件sshd_config： <code>vi /etc/ssh/sshd_config</code> （vi后有一个空格）回车进入vi编辑界面，如下图所示。在输入法英文状态下，按 <strong>i</strong> 键进入编辑模式。查找到 <strong>PasswordAuthentication no</strong> 将 <strong>no</strong> 改成 <strong>yes</strong> ，按 <strong>esc</strong> 键，退出编辑模式。然后输入 <strong>:wq</strong> 回车，退出vi编辑界面。<br><img src="http://wx1.sinaimg.cn/large/e2654362gy1g4355kwd58j21000u0dzg.jpg" alt="编辑sshd_config文件"></li>
 <li>重启实例系统： <code>reboot</code> 回车，立即重启服务器系统。</li>
 </ol>
 <h5 id="重启后，可以使用用户密码来ssh登录服务器了"><a href="#重启后，可以使用用户密码来ssh登录服务器了" class="headerlink" title="重启后，可以使用用户密码来ssh登录服务器了"></a>重启后，可以使用用户密码来ssh登录服务器了</h5><h6 id="mac系统登录"><a href="#mac系统登录" class="headerlink" title="mac系统登录"></a>mac系统登录</h6><p>使用 <code>ssh ubuntu@独立公有IP</code> 回车，输入上一步设置的ubuntu用户密码，回车，即可登录服务器实例。</p>
 <h6 id="win系统登录"><a href="#win系统登录" class="headerlink" title="win系统登录"></a>win系统登录</h6><p>使用xshell，在用户身份验证里，方法选择 <strong>Password</strong> ，用户名填写 <strong>ubuntu</strong> ，密码填写上一步设置的ubuntu用户密码，点击确定，即可登录服务器实例。</p>
+<hr>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>以后ssh登录服务器只能用ubuntu用户登录，不允许用root用户登录。如需要用root权限操作，从ubuntu用户切换到root用户便可。<code>su</code> ，然后输入root密码，回车登录即可。</p>
 
           
         
