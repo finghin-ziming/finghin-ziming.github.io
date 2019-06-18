@@ -99,8 +99,8 @@
 <meta property="og:image" content="http://wx3.sinaimg.cn/large/e2654362gy1g3y9gdjjccj20vo0katg3.jpg">
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/e2654362gy1g3y9ghoc0yj20vb0u0dwk.jpg">
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/e2654362gy1g3y9gp452zj20vd0u04h6.jpg">
-<meta property="og:image" content="http://wx1.sinaimg.cn/large/e2654362gy1g4355kwd58j21000u0dzg.jpg">
-<meta property="og:updated_time" content="2019-06-16T09:56:58.304Z">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/e2654362ly1g454iii9h9j217j0u07ay.jpg">
+<meta property="og:updated_time" content="2019-06-18T02:57:46.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="亚马逊AWS的VPS一年免费套餐的保姆级教程">
 <meta name="twitter:description" content="亚马逊AWS的VPS一年免费套餐的保姆级教程亚马逊AWS的免费套餐说明 亚马逊AWS的免费套餐分为三类：永久免费、12个月免费和试用。详细的套餐情况看官网AWS免费套餐详细信息。这里说的是12个月的免费云服务器服务套餐。 免费云服务器套餐  Amazon EC2：750个小时的Linux、RHEL、SLES、window t2.micro型云服务器实例（虚拟机） Amazon S3： 5GB的标准">
@@ -402,7 +402,7 @@
 <li>设置root管理员用户密码： <code>sudo passwd root</code> 提示输入两次密码，每次输入用回车确认。</li>
 <li>切换到root账号： <code>su root</code> 输入刚才设置的密码，回车确认。</li>
 <li>设置ubuntu用户密码： <code>passwd ubuntu</code> 提示输入两次密码，每次输入用回车确认。</li>
-<li>编辑服务器的ssh配置文件sshd_config： <code>vi /etc/ssh/sshd_config</code> （vi后有一个空格）回车进入vi编辑界面，如下图所示。在输入法英文状态下，按 <strong>i</strong> 键进入编辑模式。查找到 <strong>PasswordAuthentication no</strong> 将 <strong>no</strong> 改成 <strong>yes</strong> ，按 <strong>esc</strong> 键，退出编辑模式。然后输入 <strong>:wq</strong> 回车，退出vi编辑界面。<br><img src="http://wx1.sinaimg.cn/large/e2654362gy1g4355kwd58j21000u0dzg.jpg" alt="编辑sshd_config文件"></li>
+<li>编辑服务器的ssh配置文件sshd_config： <code>vi /etc/ssh/sshd_config</code> （vi后有一个空格）回车进入vi编辑界面，如下图所示。在输入法英文状态下，按 <strong>i</strong> 键进入编辑模式。查找到 <strong>PasswordAuthentication no</strong> 将 <strong>no</strong> 改成 <strong>yes</strong> ，按 <strong>esc</strong> 键，退出编辑模式。然后输入 <strong>:wq</strong> 回车，退出vi编辑界面。<br><img src="http://wx4.sinaimg.cn/large/e2654362ly1g454iii9h9j217j0u07ay.jpg" alt="编辑sshd_config文件"></li>
 <li>重启实例系统： <code>reboot</code> 回车，立即重启服务器系统。</li>
 </ol>
 <h5 id="重启后，可以使用用户密码来ssh登录服务器了"><a href="#重启后，可以使用用户密码来ssh登录服务器了" class="headerlink" title="重启后，可以使用用户密码来ssh登录服务器了"></a>重启后，可以使用用户密码来ssh登录服务器了</h5><h6 id="mac系统登录"><a href="#mac系统登录" class="headerlink" title="mac系统登录"></a>mac系统登录</h6><p>使用 <code>ssh ubuntu@独立公有IP</code> 回车，输入上一步设置的ubuntu用户密码，回车，即可登录服务器实例。</p>
