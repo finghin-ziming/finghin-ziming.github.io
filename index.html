@@ -243,6 +243,225 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/网易云音乐解锁无版权与vip，get了/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finghin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finghin的希尔伯特空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/05/网易云音乐解锁无版权与vip，get了/" itemprop="url">网易云音乐解锁无版权与vip，get了</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T17:40:55+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/雕虫小技/" itemprop="url" rel="index">
+                    <span itemprop="name">雕虫小技</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="网易云音乐解锁无版权与vip，get了"><a href="#网易云音乐解锁无版权与vip，get了" class="headerlink" title="网易云音乐解锁无版权与vip，get了"></a>网易云音乐解锁无版权与vip，get了</h3><h4 id="为什么选择网易云做解锁？"><a href="#为什么选择网易云做解锁？" class="headerlink" title="为什么选择网易云做解锁？"></a>为什么选择网易云做解锁？</h4><hr>
+<p>网易云音乐可以说是国内存量歌曲最多的音乐客户端了，口碑也是一流。但由于音乐版权归属问题，原有的大量歌曲被官方封禁，不能播放。这篇教程就是教你如何解锁所有网易云歌曲。（技术测试请勿商用）</p>
+<p><strong>技术特性</strong></p>
+<hr>
+<ul>
+<li>使用网易云旧链 / QQ / 虾米 / 百度 / 酷狗 / 酷我 / 咕咪 / JOOX 音源替换变灰歌曲链接 (默认仅启用前四)。</li>
+<li>为请求增加 X-Real-IP 参数解锁海外限制，支持指定网易云服务器 IP，支持设置上游 HTTP / HTTPS 代理。</li>
+<li>完整的流量代理功能 (HTTP / HTTPS)，可直接作为系统代理 (同时支持 PAC)。</li>
+</ul>
+<p><strong>感谢nondanee大神的项目</strong><br><strong>项目地址：</strong><a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">https://github.com/nondanee/UnblockNeteaseMusic</a></p>
+<hr>
+<h3 id="自己本地使用，可在本地电脑搭建，无延迟问题"><a href="#自己本地使用，可在本地电脑搭建，无延迟问题" class="headerlink" title="自己本地使用，可在本地电脑搭建，无延迟问题"></a>自己本地使用，可在本地电脑搭建，无延迟问题</h3><h4 id="一、window下的搭建"><a href="#一、window下的搭建" class="headerlink" title="一、window下的搭建"></a>一、window下的搭建</h4><h5 id="1、下载源码"><a href="#1、下载源码" class="headerlink" title="1、下载源码"></a>1、下载源码</h5><p><a href="https://codeload.github.com/nondanee/UnblockNeteaseMusic/zip/master" target="_blank" rel="noopener">UnblockNeteaseMusic</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下载后解压zip文件，建议放到 C 盘的目录，不要放到平时安装程序的目录，以免命令行没权限进去导致使用失败。</span><br></pre></td></tr></table></figure></p>
+<p>本教程是放在了C盘根目录：<code>C:\UnblockNeteaseMusic-master</code>。<br>请记住这个安装路径，下面会用到。</p>
+<h5 id="2、下载Node-js，并安装（Node-js作为执行程序的环境）"><a href="#2、下载Node-js，并安装（Node-js作为执行程序的环境）" class="headerlink" title="2、下载Node.js，并安装（Node.js作为执行程序的环境）"></a>2、下载Node.js，并安装（Node.js作为执行程序的环境）</h5><p><strong>按系统类型选择对应的Node.js安装包：</strong><br><a href="https://nodejs.org/dist/latest/node-v12.7.0-x64.msi" target="_blank" rel="noopener">64位 Node.js</a><br><a href="https://nodejs.org/dist/latest/node-v12.7.0-x86.msi" target="_blank" rel="noopener">32位 Node.js</a><br>下载后，双击默认安装即可。</p>
+<h5 id="3、查看获取本机访问网易云音乐的IP地址"><a href="#3、查看获取本机访问网易云音乐的IP地址" class="headerlink" title="3、查看获取本机访问网易云音乐的IP地址"></a>3、查看获取本机访问网易云音乐的IP地址</h5><p><code>win + R</code>组合键打开“运行”，输入<code>cmd</code>，打开命令行窗口；<br>在命令行窗口输入<code>ping music.163.com</code></p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362ly1g606hxyeudj20mz0e80sw.jpg" alt="查看获取本机访问网易云音乐的IP地址"></p>
+<p>上图所示，记录下红框处的IP地址，后面会用到。</p>
+<h5 id="4、制作bat批处理启动脚本，用来启动解锁程序"><a href="#4、制作bat批处理启动脚本，用来启动解锁程序" class="headerlink" title="4、制作bat批处理启动脚本，用来启动解锁程序"></a>4、制作bat批处理启动脚本，用来启动解锁程序</h5><p>用记事本新建一个文档，将下面3行代码复制进去，保存在<code>C:\UnblockNeteaseMusic-master</code>（上面记录的路径）下，文档名随便取，后缀改成<code>.bat</code>，教程这里是保存为FinghinMusic.bat了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">cd C:\UnblockNeteaseMusic-master</span><br><span class="line">node app.js -p 2333 -f 59.111.160.197</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>第二行 cd 后面的路径，修改为 UnblockNeteaseMusic 的路径（看上面步骤1）；<br>第三行代码里“2333”为代理端口，可以自定义（建议端口范围2001-65535）；<br>第三行结尾的 IP 地址（-f 后），改为自己 ping 到的本机访问网易云音乐IP地址（看步骤3）。</p>
+</blockquote>
+<h5 id="5、运行-bat启动脚本"><a href="#5、运行-bat启动脚本" class="headerlink" title="5、运行.bat启动脚本"></a>5、运行.bat启动脚本</h5><p>右键用管理员运行FinghinMusic.bat脚本，启动解锁程序。如下图所示：</p>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362ly1g606i1ryyzj20r70e8t8m.jpg" alt="启动解锁程序脚本的命令窗口"></p>
+<p>命令窗口不能关闭，关闭了解锁服务就停止了。<strong>若需要开机即运行在后台看下面步骤7。</strong></p>
+<h5 id="6、打开网易云音乐客户端，进行代理设置"><a href="#6、打开网易云音乐客户端，进行代理设置" class="headerlink" title="6、打开网易云音乐客户端，进行代理设置"></a>6、打开网易云音乐客户端，进行代理设置</h5><p>下图所示，打开网易云音乐客户端的“设置”页面，在“工具”里，点选<code>自定义代理</code>，在下拉框里选择<code>Http代理</code>,在服务器里填<code>127.0.0.1</code>，端口填步骤4里自己定义的代理端口（教程这里是2333）。</p>
+<p><img src="http://wx1.sinaimg.cn/large/e2654362ly1g606i4oackj20se0imwf0.jpg" alt="客户端的代理设置界面"></p>
+<h5 id="7、将bat启动脚本隐藏在后台并开机启动"><a href="#7、将bat启动脚本隐藏在后台并开机启动" class="headerlink" title="7、将bat启动脚本隐藏在后台并开机启动"></a>7、将bat启动脚本隐藏在后台并开机启动</h5><p>用记事本新建一个文档，把下面两条代码复制进去，保存路径与.bat文件一致，在<code>C:\UnblockNeteaseMusic-master</code>下。文档名随意取，后缀改成<code>.vbs</code>，本教程保存为FinghinMusic.vbs了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(&quot;Wscript.Shell&quot;)  </span><br><span class="line">ws.run &quot;cmd /c FinghinMusic.bat&quot;,vbhide</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>上面第二行代码中的FinghinMusic.bat是需要启动的.bat文件，文件名请改成自己的。</p>
+</blockquote>
+<p><strong>开机启动</strong></p>
+<p>在<code>C:\UnblockNeteaseMusic-master</code>目录下右键<code>FinghinMusic.vbs</code>文件，选择<code>创建快捷方式</code>，然后将创建的快捷方式复制或者剪切到自启文件夹里。(该文件夹路径为<code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp</code>)<br><strong>打开自启文件夹：</strong> <code>win + R</code>组合键打开“运行”，输入<code>shell:startup</code>，即可打开系统自启动文件夹。</p>
+<hr>
+<h4 id="二、在mac下的搭建"><a href="#二、在mac下的搭建" class="headerlink" title="二、在mac下的搭建"></a>二、在mac下的搭建</h4><h5 id="1、安装git、node-js"><a href="#1、安装git、node-js" class="headerlink" title="1、安装git、node.js"></a>1、安装git、node.js</h5><p>解锁脚本通过git拉取，mac下安装git是基础，不会的请自行google。</p>
+<p>到node.js官网首页下载LTS版本：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a>,默认安装即可。安装完后在终端窗口输入<code>node -v</code>可验证node.js版本。</p>
+<h5 id="2、通过git拉取解锁脚本代码到本地"><a href="#2、通过git拉取解锁脚本代码到本地" class="headerlink" title="2、通过git拉取解锁脚本代码到本地"></a>2、通过git拉取解锁脚本代码到本地</h5><p>git拉取解锁脚本代码到本地：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git</span><br></pre></td></tr></table></figure></p>
+<h5 id="3、查看获取本机访问网易云音乐的IP地址-1"><a href="#3、查看获取本机访问网易云音乐的IP地址-1" class="headerlink" title="3、查看获取本机访问网易云音乐的IP地址"></a>3、查看获取本机访问网易云音乐的IP地址</h5><p>在终端窗口输入<code>ping music.163.com</code>，记录下本地访问网易云音乐的节点IP，下面会用到。</p>
+<h5 id="4、配置本机hosts"><a href="#4、配置本机hosts" class="headerlink" title="4、配置本机hosts"></a>4、配置本机hosts</h5><p>在终端窗口输入<code>sudo vi /etc/hosts</code>，在hosts文件最底部加入下面两行代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 music.163.com</span><br><span class="line">127.0.0.1 interface.music.163.com</span><br></pre></td></tr></table></figure></p>
+<h5 id="5、自签CA证书代理https流量"><a href="#5、自签CA证书代理https流量" class="headerlink" title="5、自签CA证书代理https流量"></a>5、自签CA证书代理https流量</h5><p>由于mac新版网易云音乐需要用https请求流量，可以进行自签CA证书来代理https。项目脚本根目录里自带了一个CA证书，若不自己签发，则可以直接将CA证书文件 <strong>ca.crt</strong> 安装到mac系统。<br>安装证书添加本机信任步骤：</p>
+<ol>
+<li>打开启动台-其他-钥匙串访问；</li>
+<li>将ca.crt文件拉拽到钥匙串访问窗口；</li>
+<li>标记对应的证书文件受此帐户信任。<br>成功后如下图所示：</li>
+</ol>
+<p><img src="http://wx3.sinaimg.cn/large/e2654362ly1g606i805n6j21330u0jz8.jpg" alt="添加ca证书并设置信任"></p>
+<p>若选择自己签发证书，可借助OpenSSL签发：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 生成 CA 私钥</span><br><span class="line">openssl genrsa -out ca.key 2048</span><br><span class="line"></span><br><span class="line"># 生成 CA 证书 (&quot;YOURNAME&quot; 处填上你自己的名字)</span><br><span class="line">openssl req -x509 -new -nodes -key ca.key -sha256 -days 1825 -out ca.crt -subj &quot;/C=CN/CN=UnblockNeteaseMusic Root CA/O=YOURNAME&quot;</span><br><span class="line"></span><br><span class="line"># 生成服务器私钥</span><br><span class="line">openssl genrsa -out server.key 2048</span><br><span class="line"></span><br><span class="line"># 生成证书签发请求</span><br><span class="line">openssl req -new -sha256 -key server.key -out server.csr -subj &quot;/C=CN/L=Hangzhou/O=NetEase (Hangzhou) Network Co., Ltd/OU=IT Dept./CN=*.music.163.com&quot;</span><br><span class="line"></span><br><span class="line"># 使用 CA 签发服务器证书</span><br><span class="line">openssl x509 -req -extfile &lt;(printf &quot;subjectAltName=DNS:music.163.com,DNS:*.music.163.com&quot;) -days 365 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt</span><br></pre></td></tr></table></figure></p>
+<p>上述步骤完成后</p>
+<p>将服务器私钥 (server.key) 和服务器证书 (server.crt) 拷贝到仓库中覆盖原有文件，再将 CA 证书 (ca.crt) 安装到mac系统。</p>
+<h5 id="6、启动脚本"><a href="#6、启动脚本" class="headerlink" title="6、启动脚本"></a>6、启动脚本</h5><p>打开终端，cd进入UnblockNeteaseMusic脚本目录，执行下面命令，开始启动解锁脚本。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo node app.js -p 80:443 -f 59.111.181.xx</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>注意：在启动命令中增加 https 监听端口，格式为<code>-p &lt;http port&gt;:&lt;https port&gt;</code>,这里是使用本机的hosts模式的，所以为<code>-p 80:443</code>。<code>-f</code>后是上面第3步的本地访问网易云音乐的节点IP</li>
+</ul>
+<h5 id="7、打开网易云音乐客户端"><a href="#7、打开网易云音乐客户端" class="headerlink" title="7、打开网易云音乐客户端"></a>7、打开网易云音乐客户端</h5><p>重新启动网易云音乐客户端（若后台已经打开客户端需要先退出）即可，这时发现原来的无版权音乐歌曲已经可以播放了，独家vip资源也可以播放。</p>
+<hr>
+<h3 id="若要给其他人使用或者在移动客户端使用，则需要搭建解锁代理服务器"><a href="#若要给其他人使用或者在移动客户端使用，则需要搭建解锁代理服务器" class="headerlink" title="若要给其他人使用或者在移动客户端使用，则需要搭建解锁代理服务器"></a>若要给其他人使用或者在移动客户端使用，则需要搭建解锁代理服务器</h3><h4 id="部署解锁代理服务器，并用守护进程开机启动服务"><a href="#部署解锁代理服务器，并用守护进程开机启动服务" class="headerlink" title="部署解锁代理服务器，并用守护进程开机启动服务"></a>部署解锁代理服务器，并用守护进程开机启动服务</h4><h5 id="1、安装Node-js、git"><a href="#1、安装Node-js、git" class="headerlink" title="1、安装Node.js、git"></a>1、安装Node.js、git</h5><p>linux服务器安装Node.js，执行下面命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#Debian/Ubuntu系统</span><br><span class="line">curl -sL https://deb.nodesource.com/setup_10.x | bash -</span><br><span class="line">apt install -y nodejs git</span><br><span class="line"></span><br><span class="line">#CentOS系统</span><br><span class="line">curl -sL https://rpm.nodesource.com/setup_10.x | bash -</span><br><span class="line">yum install nodejs git -y</span><br></pre></td></tr></table></figure></p>
+<h5 id="2、下载UnblockNeteaseMusic脚本并启动"><a href="#2、下载UnblockNeteaseMusic脚本并启动" class="headerlink" title="2、下载UnblockNeteaseMusic脚本并启动"></a>2、下载UnblockNeteaseMusic脚本并启动</h5><p>先用git拉取UnblockNeteaseMusic网易云音乐解锁脚本，再启动脚本解锁。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/nondanee/UnblockNeteaseMusic.git</span><br><span class="line">cd UnblockNeteaseMusic</span><br><span class="line">node app.js -p 16666:28888</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>上面第三行代码中 <code>-p 16666:28888</code> 的格式是增加了 https 监听端口，一般格式为<code>-p &lt;http port&gt;:&lt;https port&gt;</code>，主要监听的是<code>&lt;http port&gt;</code>，请改为自己的端口，后面的<code>&lt;https port&gt;</code>随便设置另一个不同的端口即可。</li>
+<li>因为解锁脚本访问的流量是http协议的，所以<code>&lt;http port&gt;</code>对应的端口一定要记得在服务器防火墙放行，而<code>&lt;https port&gt;</code>端口可以不放行。</li>
+</ul>
+<h5 id="3、用systemd守护进程启动脚本并设置脚本开机自启动"><a href="#3、用systemd守护进程启动脚本并设置脚本开机自启动" class="headerlink" title="3、用systemd守护进程启动脚本并设置脚本开机自启动"></a>3、用systemd守护进程启动脚本并设置脚本开机自启动</h5><p>可以用systemd守护进程来启动脚本，脚本放后台运行。适用于 <strong>CentOS 7、Debian 8+、Ubuntu 16+</strong>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /etc/systemd/system/UnblockNeteaseMusic.service &lt;&lt;EOF</span><br><span class="line">#!/bin/sh</span><br><span class="line">[Unit]</span><br><span class="line">Description=UnblockNeteaseMusic</span><br><span class="line">After=network.target</span><br><span class="line">Wants=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">PIDFile=/var/run/UnblockNeteaseMusic.pid</span><br><span class="line">WorkingDirectory=/root/UnblockNeteaseMusic</span><br><span class="line">ExecStart=/usr/bin/node /root/UnblockNeteaseMusic/app.js -p 16666:28888</span><br><span class="line">RestartPreventExitStatus=23</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>注意：</li>
+<li>‘ExecStart=’这行代码里<code>/usr/bin/node</code>是自己服务器系统node的安装路径，可以通过<code>which node</code>命令来找到。而<code>root/UnblockNeteaseMusic/app.js</code>则是启动脚本的绝对路径</li>
+</ul>
+<p>这里是用systemd来运行进程，运行在后台。如果需要修改启动进程的参数，通过vi编辑<code>UnblockNeteaseMusic.service</code>配置文件。编辑后需要重载所有修改过的配置文件，再重新启动服务进程即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 重载所有修改过的配置文件</span><br><span class="line">$ sudo systemctl daemon-reload</span><br><span class="line"># 重启一个服务</span><br><span class="line">$ sudo systemctl restart UnblockNeteaseMusic.service</span><br><span class="line"># 显示单个服务的状态</span><br><span class="line">$ sysystemctl status UnblockNeteaseMusic.service</span><br></pre></td></tr></table></figure></p>
+<p>设置开机自启：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start UnblockNeteaseMusic</span><br><span class="line">sudo systemctl enable UnblockNeteaseMusic</span><br></pre></td></tr></table></figure></p>
+<h5 id="3-、不支持systemd的系统，可以直接使用rc-local"><a href="#3-、不支持systemd的系统，可以直接使用rc-local" class="headerlink" title="3+、不支持systemd的系统，可以直接使用rc.local"></a>3+、不支持systemd的系统，可以直接使用rc.local</h5><p>有些系统不支持systemd，例如CentOS 6，Debian 7等，要使用守护进程将进程放在后台运行，可以使用系统自带的<code>rc.local</code>命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#路径和命令自行修改</span><br><span class="line">sed -i &apos;/exit/d&apos; /etc/rc.local</span><br><span class="line">echo &quot;cd /root/UnblockNeteaseMusic &amp;&amp; node app.js -p 16666:28888&quot; &gt;&gt; /etc/rc.local</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="各端设置使用服务器的解锁代理服务"><a href="#各端设置使用服务器的解锁代理服务" class="headerlink" title="各端设置使用服务器的解锁代理服务"></a>各端设置使用服务器的解锁代理服务</h4><p>Android：<br>连接wlan下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#设置方法</span><br><span class="line">手机设置 &gt; WLAN &gt; 网络设置 &gt; 高级选项 &gt; 代理</span><br><span class="line">一般安卓手机设置代理类型的时候分2种，手动代理和自动代理，有的手机可能只有手动代理，大致设置如下：</span><br><span class="line">手动代理 &gt; 只需要填上你的服务器IP和端口就可以了。</span><br><span class="line">自动代理 &gt; 填上你的PAC地址就行了，地址：http://&lt;Server Name:PORT&gt;/proxy.pac，修改为你的ip、运行端口。</span><br><span class="line">建议优先使用手动代理</span><br></pre></td></tr></table></figure></p>
+<p>使用数据流量下：<br>配合 <strong>Xndroid</strong> 等工具来使用。<br>app下载地址：<br><a href="https://github.com/XndroidDev/Xndroid/releases" target="_blank" rel="noopener">Xndroid</a><br>大致设置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开Xndroid &gt; 点击左侧Fqrouter &gt; 添加个人代理(只需要填服务器ip和端口即可) &gt; 代理列表配置项(将高级设置里面全部关掉) &gt; 软件右上角代理设置(只代理网易云音乐)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>设置完成后你还可以在右上角启动设置中，关掉xx-net和fqrouter里面的所有启动项，这样开启软件速度也会快很多。<br>IOS：<br>需要借助 <strong>Shadowrocket</strong> 这类的代理工具，就 shadowrocket 举例说明。按下面的步骤图来进行设置。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#设置方法</span><br><span class="line">打开小火箭 &gt; 添加节点(类型选择HTTP，输入你的ip和端口，随便备注下，右上角完成即可) &gt; 编辑配置 &gt; 添加规则(类型选择USER-AGENT，选项选择网易云，用户代理输入NeteaseMusic*)，保存即可。</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://wx4.sinaimg.cn/large/e2654362ly1g606ibc6aoj21jl0u0794.jpg" alt="Shadowrocket设置http代理"></p>
+<p>Windows：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#设置方法</span><br><span class="line">网易云客户端设置 &gt; 工具 &gt; 自定义代理 &gt; HTTP代理</span><br><span class="line"></span><br><span class="line">这里只需要填上你的服务器ip和端口，保存即可。</span><br></pre></td></tr></table></figure></p>
+<p>macOS：<br>需要自签CA证书代理https流量来降级成http流量，具体方法上文中的“在mac下的搭建”步骤。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#设置方法</span><br><span class="line">系统偏好设置 &gt; 网络 &gt; 高级 &gt; 代理</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/谷歌云300美金的白嫖：从敲定到完事/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1472,7 +1691,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1483,7 +1702,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
