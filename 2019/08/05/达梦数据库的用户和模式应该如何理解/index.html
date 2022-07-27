@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="达梦数据库的用户和模式应该如何理解？最近参加了达梦DCA认证培训，课程里提到了达梦数据库有个特殊的概念–模式。这个对于习惯用户式操作的Oracler来说，是耳目一新的。下文从达梦论坛里摘选出hql专家的应答便于自己记忆和理解该概念。  非常重要的一句话：我们所说的配置登录默认模式、模式切换，都是某一个用户自己建立的多个模式之间切换，模式和用户不存在授权的概念，也不能授权，只有属于和不属于；同时，我">
+<meta name="keywords" content="数据挖掘，爬虫，深度学习，数据造物">
+<meta property="og:type" content="article">
+<meta property="og:title" content="达梦数据库的用户和模式应该如何理解">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/达梦数据库的用户和模式应该如何理解/index.html">
+<meta property="og:site_name" content="Finghin的希尔伯特空间">
+<meta property="og:description" content="达梦数据库的用户和模式应该如何理解？最近参加了达梦DCA认证培训，课程里提到了达梦数据库有个特殊的概念–模式。这个对于习惯用户式操作的Oracler来说，是耳目一新的。下文从达梦论坛里摘选出hql专家的应答便于自己记忆和理解该概念。  非常重要的一句话：我们所说的配置登录默认模式、模式切换，都是某一个用户自己建立的多个模式之间切换，模式和用户不存在授权的概念，也不能授权，只有属于和不属于；同时，我">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2022-07-27T09:33:41.409Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="达梦数据库的用户和模式应该如何理解">
+<meta name="twitter:description" content="达梦数据库的用户和模式应该如何理解？最近参加了达梦DCA认证培训，课程里提到了达梦数据库有个特殊的概念–模式。这个对于习惯用户式操作的Oracler来说，是耳目一新的。下文从达梦论坛里摘选出hql专家的应答便于自己记忆和理解该概念。  非常重要的一句话：我们所说的配置登录默认模式、模式切换，都是某一个用户自己建立的多个模式之间切换，模式和用户不存在授权的概念，也不能授权，只有属于和不属于；同时，我">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/08/05/达梦数据库的用户和模式应该如何理解/">
+
+
+
+
+
+  <title>达梦数据库的用户和模式应该如何理解 | Finghin的希尔伯特空间</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Finghin的希尔伯特空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">完备的，可记录的，可虚拟的</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/05/达梦数据库的用户和模式应该如何理解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finghin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Finghin的希尔伯特空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">达梦数据库的用户和模式应该如何理解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T17:40:55+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/内卷从考证开始/" itemprop="url" rel="index">
+                    <span itemprop="name">内卷从考证开始</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/内卷从考证开始/达梦DCA/" itemprop="url" rel="index">
+                    <span itemprop="name">达梦DCA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="达梦数据库的用户和模式应该如何理解？"><a href="#达梦数据库的用户和模式应该如何理解？" class="headerlink" title="达梦数据库的用户和模式应该如何理解？"></a>达梦数据库的用户和模式应该如何理解？</h3><p>最近参加了达梦DCA认证培训，课程里提到了达梦数据库有个特殊的概念–模式。这个对于习惯用户式操作的Oracler来说，是耳目一新的。下文从达梦论坛里摘选出hql专家的应答便于自己记忆和理解该概念。</p>
+<hr>
+<p>非常重要的一句话：<br>我们所说的配置登录默认模式、模式切换，都是某一个用户自己建立的多个模式之间切换，模式和用户不存在授权的概念，也不能授权，只有属于和不属于；同时，我们所有的模式切换，是不能跨到其他用户下面去的；</p>
+<hr>
+<h3 id="达梦的用户和模式是什么？"><a href="#达梦的用户和模式是什么？" class="headerlink" title="达梦的用户和模式是什么？"></a>达梦的用户和模式是什么？</h3><p>达梦的用户，是数据库实例里一个逻辑概念。它是一个操作空间、一个逻辑空间，在这个空间内，可以建立表结构，部署应用。</p>
+<p>比如说，一个数据库实例上，我们新建2个用户，每个用户独立部署一个应用系统。</p>
+<ul>
+<li>说明</li>
+<li>当然，也可能是新建2用户，每个用户独立部署一个模块（每个模块，有自己独立的一套表结构）。</li>
+<li>大家尽量不要在一个实例中，攒太多的系统；低耦合的时代，这样子不好。</li>
+</ul>
+<p>上面的理解是对的吗？对于Oracle的小伙伴来说，是对的。把达梦理解成一个单用户单模式的数据库即可。但，实际上，这个又不太对：</p>
+<ul>
+<li>实际上，达梦上面，承载业务逻辑的不是用户，而是模式，我们在新建用户时，系统会自动新建一个和用户名相同的模式，我们所有的操作，都是在“模式”中。</li>
+<li>而且，达梦一个用户，是可以对应多个模式的（当我们要实现，在一个连接中，切换模式，那么就必须使用单用户多模式的方法）。</li>
+</ul>
+<hr>
+<h3 id="多模式怎么使用？"><a href="#多模式怎么使用？" class="headerlink" title="多模式怎么使用？"></a>多模式怎么使用？</h3><p>直接使用对应用户新建模式即可，比如：</p>
+<p><code>sysdba</code>登录数据库，直接执行<code>create schema schema1</code>；或者<code>create schema schema2 AUTHORIZATION sysdba</code>;<br>就可以为用户<code>sysdba</code>，额外新建 <code>schema1</code> 和 <code>schema2</code> 两个模式。</p>
+<p>注意：经过上面的操作，<code>sysdba</code>这个用户，就有3个模式了，<code>sysdba</code>、<code>schema1</code>、<code>schema2</code>。</p>
+<hr>
+<h3 id="经典用法-SQL语句不希望加模式名"><a href="#经典用法-SQL语句不希望加模式名" class="headerlink" title="经典用法-SQL语句不希望加模式名"></a>经典用法-SQL语句不希望加模式名</h3><p>如果我们碰到这个问题：<code>select * from schema_name.tablename</code>;<br>开发的同事问，能不能执行的时候，不带<code>schema_name.</code>，直接写成<code>select * from tablename</code>;</p>
+<p>这个是可以的，但又不是完全可以，比如：</p>
+<p>1、如果我们新建 <code>schema_name</code> 这个用户，那么我们使用 <code>schema_name</code> 这个用户登录时，语句里涉及到的表，都会默认带上 <code>schema_name.</code> 这个头缀（这么理解，是比较形象的）是可以的。<br>要求：必须新建同名用户后，再迁移数据。<br>说明：这里既然是“默认带上”，那么后面这句话就好理解了 —— 所有的其他模式（不管是这个用户下的，还是不是这个用户下的对象，如果要访问，就必须通过 模式名.对象名，才可以访问到 —— 这是理所当然的，如果这个也可以省略，那多个模式下的同名对象那不弄混了）</p>
+<p>2、我们也可以新建用户<code>user1</code>(系统自动生成了<code>user1</code>这个同名模式），可以直接为<code>user1</code>新建一个 <code>schema_name</code>的模式，那么在配置jdbc连接属性的时候，可以指定 schema的属性=schema_name,也可以实现上面的效果(sql语句不用加这schema_name这个模式名）；同理，如果要访问其他模式，肯定是必须加模式名的。</p>
+<hr>
+<h3 id="模式问答"><a href="#模式问答" class="headerlink" title="模式问答"></a>模式问答</h3><h5 id="1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？"><a href="#1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？" class="headerlink" title="1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？"></a>1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？</h5><p>模式没有自己的权限，我们不可以给某个用户授权模式权限（模式和权限，基本上不太会出现在同一句话里）。</p>
+<h5 id="2、达梦的模式和Oracle的模式有什么区别？如何理解"><a href="#2、达梦的模式和Oracle的模式有什么区别？如何理解" class="headerlink" title="2、达梦的模式和Oracle的模式有什么区别？如何理解"></a>2、达梦的模式和Oracle的模式有什么区别？如何理解</h5><p>如果是从Oracle迁移过来的，请大家保持单用户单模式的使用模式。</p>
+<ul>
+<li>先为Oracle的每一个用户，都在达梦上，先建立好对应的用户，再迁移数据。</li>
+<li>忘掉模式的概念，眼里只有用户。</li>
+</ul>
+<h5 id="3、达梦的模式和Mysql的库有什么区别？如何理解"><a href="#3、达梦的模式和Mysql的库有什么区别？如何理解" class="headerlink" title="3、达梦的模式和Mysql的库有什么区别？如何理解"></a>3、达梦的模式和Mysql的库有什么区别？如何理解</h5><p>如果是从Mysql迁移过来的，一般也请大家保持单用户单模式的使用模式。</p>
+<ul>
+<li>先为Mysql的每一个库名，都在达梦上，先建立好对应的用户，再迁移数据。</li>
+<li>忘掉模式的概念，眼里只有用户。</li>
+</ul>
+<p>如果，我们有业务需要在同一个连接中切换库名（Mysql支持），那就不能按照上面 库-&gt;用户的方式迁移了，必须把这些需要切换的库名，设计成达梦上同一个用户下的多个模式。（重要）</p>
+<h5 id="4、达梦在连接串里面可以指定登录模式吗？（重要）"><a href="#4、达梦在连接串里面可以指定登录模式吗？（重要）" class="headerlink" title="4、达梦在连接串里面可以指定登录模式吗？（重要）"></a>4、达梦在连接串里面可以指定登录模式吗？（重要）</h5><p>可以，jdbc连接串的属性可以指定。</p>
+<h5 id="5、在单用户多模式下，怎么查询自己当前模式下的对象？"><a href="#5、在单用户多模式下，怎么查询自己当前模式下的对象？" class="headerlink" title="5、在单用户多模式下，怎么查询自己当前模式下的对象？"></a>5、在单用户多模式下，怎么查询自己当前模式下的对象？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">        sch.name schema_name,</span><br><span class="line">        obj.*</span><br><span class="line">FROM</span><br><span class="line">        sysobjects sch,</span><br><span class="line">        sysobjects obj</span><br><span class="line">where</span><br><span class="line">        sch.id   =obj.schid</span><br><span class="line">    AND SCH.NAME =SF_GET_SCHEMA_NAME_BY_ID(CURRENT_SCHID);</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>摘录的原帖地址：</strong><a href="https://eco.dameng.com/community/article/7663df9b6404dfd2e8c8b593183f6ec4" target="_blank" rel="noopener">对达梦数据库用户和模式的理解</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/05/网易云音乐解锁无版权与vip，get了/" rel="next" title="网易云音乐解锁无版权与vip，get了">
+                <i class="fa fa-chevron-left"></i> 网易云音乐解锁无版权与vip，get了
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Finghin</p>
+              <p class="site-description motion-element" itemprop="description">记录生活，可回溯的时间技术。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#达梦数据库的用户和模式应该如何理解？"><span class="nav-number">1.</span> <span class="nav-text">达梦数据库的用户和模式应该如何理解？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#达梦的用户和模式是什么？"><span class="nav-number">2.</span> <span class="nav-text">达梦的用户和模式是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多模式怎么使用？"><span class="nav-number">3.</span> <span class="nav-text">多模式怎么使用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经典用法-SQL语句不希望加模式名"><span class="nav-number">4.</span> <span class="nav-text">经典用法-SQL语句不希望加模式名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式问答"><span class="nav-number">5.</span> <span class="nav-text">模式问答</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？"><span class="nav-number">5.0.1.</span> <span class="nav-text">1、模式有自己的权限吗？我们可以给某个用户授予某个模式的权限吗？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2、达梦的模式和Oracle的模式有什么区别？如何理解"><span class="nav-number">5.0.2.</span> <span class="nav-text">2、达梦的模式和Oracle的模式有什么区别？如何理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3、达梦的模式和Mysql的库有什么区别？如何理解"><span class="nav-number">5.0.3.</span> <span class="nav-text">3、达梦的模式和Mysql的库有什么区别？如何理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4、达梦在连接串里面可以指定登录模式吗？（重要）"><span class="nav-number">5.0.4.</span> <span class="nav-text">4、达梦在连接串里面可以指定登录模式吗？（重要）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5、在单用户多模式下，怎么查询自己当前模式下的对象？"><span class="nav-number">5.0.5.</span> <span class="nav-text">5、在单用户多模式下，怎么查询自己当前模式下的对象？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Finghin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
